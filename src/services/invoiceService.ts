@@ -25,10 +25,11 @@ export async function fetchOldInvoices(apiUrl: string): Promise<Invoice[]> {
 }
 
 function isOlderThanSixHours(timestamp: string): boolean {
-  const sixHoursInMilliseconds = 6 * 60 * 60 * 1000;
-  const invoiceTime = new Date(parseInt(timestamp)).getTime();
-  const currentTime = Date.now();
-  return (currentTime - invoiceTime) > sixHoursInMilliseconds;
+  const sixHoursInSeconds = 6 * 60 * 60;
+  const invoiceTime = parseInt(timestamp);
+  const currentTime = Math.floor(Date.now() / 1000);
+  logger.info(`Invoice time: ${invoiceTime}, Current time: ${currentTime}`);
+  return (currentTime - invoiceTime) > sixHoursInSeconds;
 }
 
 export async function processInvoices(invoices: Invoice[], balances: AssetBalances, privateKey: string, chains: Record<string, ChainConfig>) {
