@@ -1,8 +1,7 @@
 import { NetworkType, AssetBalances, Invoice, Asset } from './types';
 import { getNetworkConfig } from './config/networkConfig';
-import { fetchOldInvoices } from './services/apiService';
 import { getAllBalances, checkBalances } from './services/balanceService';
-import { processInvoices } from './services/invoiceService';
+import { fetchOldInvoices, processInvoices } from './services/invoiceService';
 import { logger } from './utils/logger';
 
 export async function initializeBot(networkType: NetworkType, privateKey: string, apiUrl: string) {

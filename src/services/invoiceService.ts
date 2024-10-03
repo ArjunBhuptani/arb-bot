@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { BigNumber } from '@ethersproject/bignumber';
 import { ethers } from 'ethers';
 import { AssetBalances, Invoice, ChainConfig } from '../types';
@@ -6,6 +7,29 @@ import { mockBridgeAggregator } from '../mocks/mockBridgeAggregator';
 import { logger } from '../utils/logger';
 import { getAssetFromTickerHash } from './assetService';
 import { hasEnoughBalance } from './balanceService';
+
+export async function fetchOldInvoices(apiUrl: string): Promise<Invoice[]> {
+  try {
+    const response = await axios.get(apiUrl);
+    const data = response.data;
+
+    const oldInvoices = data.invoices.filter((invoice: Invoice) => {
+      return isOlderThanSixHours(invoice.hub_invoice_enqueued_timestamp);
+    });
+
+    return oldInvoices;
+  } catch (error) {
+    logger.error('Error fetching invoices:', error);
+    throw error;
+  }
+}
+
+function isOlderThanSixHours(timestamp: string): boolean {
+  const sixHoursInMilliseconds = 6 * 60 * 60 * 1000;
+  const invoiceTime = new Date(parseInt(timestamp)).getTime();
+  const currentTime = Date.now();
+  return (currentTime - invoiceTime) > sixHoursInMilliseconds;
+}
 
 export async function processInvoices(invoices: Invoice[], balances: AssetBalances, privateKey: string, chains: Record<string, ChainConfig>) {
   for (const invoice of invoices) {
