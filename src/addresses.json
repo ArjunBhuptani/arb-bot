@@ -1,0 +1,118 @@
+{
+    "assets": {
+        "USDT": {
+            "mainnet": {
+                "1": {
+                    "decimals": 6,
+                    "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+                },
+                "10": {
+                    "decimals": 6,
+                    "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58"
+                },
+                "56": {
+                    "decimals": 18,
+                    "address": "0x55d398326f99059fF775485246999027B3197955"
+                },
+                "42161": {
+                    "decimals": 6,
+                    "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9"
+                }
+            },
+            "testnet": {
+                "11155111": {
+                    "decimals": 6,
+                    "address": "0x7169D38820dfd117C3FA1f22a697dBA58d90BA06"
+                },
+                "420": {
+                    "decimals": 6,
+                    "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58"
+                },
+                "97": {
+                    "decimals": 18,
+                    "address": "0x337610d27c682E347C9cD60BD4b3b107C9d34dDd"
+                },
+                "421613": {
+                    "decimals": 6,
+                    "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9"
+                }
+            }
+        },
+        "USDC": {
+            "mainnet": {
+                "1": {
+                    "decimals": 6,
+                    "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+                },
+                "10": {
+                    "decimals": 6,
+                    "address": "0x7F5c764cBc14f9669B88837ca1490cCa17c31607"
+                },
+                "56": {
+                    "decimals": 18,
+                    "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d"
+                },
+                "42161": {
+                    "decimals": 6,
+                    "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8"
+                }
+            },
+            "testnet": {
+                "11155111": {
+                    "decimals": 6,
+                    "address": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238"
+                },
+                "420": {
+                    "decimals": 6,
+                    "address": "0x7F5c764cBc14f9669B88837ca1490cCa17c31607"
+                },
+                "97": {
+                    "decimals": 18,
+                    "address": "0x64544969ed7EBf5f083679233325356EbE738930"
+                },
+                "421613": {
+                    "decimals": 6,
+                    "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8"
+                }
+            }
+        },
+        "WETH": {
+            "mainnet": {
+                "1": {
+                    "decimals": 18,
+                    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+                },
+                "10": {
+                    "decimals": 18,
+                    "address": "0x4200000000000000000000000000000000000006"
+                },
+                "56": {
+                    "decimals": 18,
+                    "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8"
+                },
+                "42161": {
+                    "decimals": 18,
+                    "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1"
+                }
+            },
+            "testnet": {
+                "11155111": {
+                    "decimals": 18,
+                    "address": "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14"
+                },
+                "420": {
+                    "decimals": 18,
+                    "address": "0x4200000000000000000000000000000000000006"
+                },
+                "97": {
+                    "decimals": 18,
+                    "address": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd"
+                },
+                "421613": {
+                    "decimals": 18,
+                    "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1"
+                }
+            }
+        }
+    }
+}
