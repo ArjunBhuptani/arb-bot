@@ -7,6 +7,7 @@ import { mockBridgeAggregator } from '../tests/mocks/mockBridgeAggregator';
 import { logger } from '../utils/logger';
 import { getAssetFromTickerHash } from './assetService';
 import { hasEnoughBalance } from './balanceService';
+import { log } from 'console';
 
 export async function fetchOldInvoices(apiUrl: string): Promise<Invoice[]> {
   try {

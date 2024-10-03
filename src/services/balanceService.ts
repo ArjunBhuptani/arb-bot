@@ -53,23 +53,19 @@ export async function checkBalances(privateKey: string, asset: Asset, chains: Re
   return balances;
 }
 
-
-export function hasEnoughBalance(balances: AssetBalances, asset: Asset, chain: string, amount: string): boolean {
-    const balance = balances[asset]?.[chain];
-    if (!balance) {
-      return false;
-    }
-  
-    const chainAsset = getChainAsset(asset, chain) || getChainAsset(asset, chain);
-    if (!chainAsset) {
-      return false;
-    }
-  
-    const balanceBN = BigNumber.from(balance);
+export function hasEnoughBalance(balances: AssetBalances, asset: string, chain: string, amount: string): boolean {
+  try {
+    const balance = balances[asset][chain];
+    // Convert the balance string to a BigNumber, handling decimal points
+    const balanceBN = BigNumber.from(ethers.parseUnits(balance, 18));
     const amountBN = BigNumber.from(amount);
-  
-    // Convert amount to the asset's decimal places
-    const adjustedAmount = amountBN.mul(BigNumber.from(10).pow(chainAsset.decimals));
-  
-    return balanceBN.gte(adjustedAmount);
+
+    logger.info(`Checking balance for ${asset} on chain ${chain}`);
+    logger.info(`Balance: ${balanceBN.toString()}, Required: ${amountBN.toString()}`);
+
+    return balanceBN.gte(amountBN);
+  } catch (error) {
+    logger.error(`Error checking balance: ${error}`);
+    return false;
   }
+}
