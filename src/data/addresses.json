@@ -1,7 +1,7 @@
 {
     "assets": {
         "USDT": {
-            "tickerHash": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+            "tickerHash": "0x8b1a1d9c2b109e527c9134b25b1a1833b16b6594f92daa9f6d9b7a6024bce9d0",
             "1": {
                 "decimals": 6,
                 "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
@@ -36,7 +36,7 @@
             }
         },
         "USDC": {
-            "tickerHash": "0xabcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890",
+            "tickerHash": "0xd6aca1be9729c13d677335161321649cccae6a591554772516700f986f942eaa",
             "1": {
                 "decimals": 6,
                 "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
@@ -71,7 +71,7 @@
             }
         },
         "WETH": {
-            "tickerHash": "0x9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba",
+            "tickerHash": "0x0f8a193ff464434486c0daf7db2a895884365d2bc84ba47a68fcf89c1b14b5b8",
             "1": {
                 "decimals": 18,
                 "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
