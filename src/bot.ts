@@ -25,5 +25,5 @@ export async function initializeBot(networkType: NetworkType, privateKey: string
   logger.info("Available deposits:", availableDeposits);
 
   // Step 3 & 4: Process invoices
-  await processInvoices(oldInvoices, allBalances, privateKey, chains, apiUrl);
+  await processInvoices(oldInvoices, allBalances, availableDeposits, privateKey, chains, apiUrl);
 }

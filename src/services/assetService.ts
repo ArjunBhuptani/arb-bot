@@ -43,3 +43,23 @@ export function getChainAsset(asset: Asset, chainId: string): ChainAsset | null 
 
   return null;
 }
+
+export function normalizeToEighteenDecimals(balance: BigNumber, asset: Asset, chainId: string): BigNumber {
+  const chainAsset = getChainAsset(asset, chainId);
+  if (!chainAsset) {
+    throw new Error(`Asset ${asset} not found for chain ${chainId}`);
+  }
+
+  const assetDecimals = Number(chainAsset.decimals);
+  if (assetDecimals === 18) {
+    return balance;
+  }
+
+  if (assetDecimals < 18) {
+    // If asset has fewer than 18 decimals, we need to add zeros
+    return balance.mul(BigNumber.from(10).pow(18 - assetDecimals));
+  } else {
+    // If asset has more than 18 decimals, we need to remove precision
+    return balance.div(BigNumber.from(10).pow(assetDecimals - 18));
+  }
+}
