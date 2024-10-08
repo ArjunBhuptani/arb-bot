@@ -55,7 +55,13 @@ export async function checkBalances(privateKey: string, asset: Asset, chains: Re
 
 export function hasEnoughBalance(balances: AssetBalances, asset: string, chain: string, amount: string): boolean {
   try {
-    const balance = balances[asset][chain];
+    const balance = balances[asset]?.[chain];
+    
+    if (balance === undefined || balance === null) {
+      logger.warn(`No balance found for ${asset} on chain ${chain}`);
+      return false;
+    }
+
     // Convert the balance string to a BigNumber, handling decimal points
     const balanceBN = BigNumber.from(ethers.parseUnits(balance, 18));
     const amountBN = BigNumber.from(amount);

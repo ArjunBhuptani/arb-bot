@@ -20,5 +20,5 @@ export async function initializeBot(networkType: NetworkType, privateKey: string
   logger.info("Invoices older than 6 hours:", oldInvoices);
 
   // Step 3 & 4: Process invoices
-  await processInvoices(oldInvoices, allBalances, privateKey, chains);
+  await processInvoices(oldInvoices, allBalances, privateKey, chains, apiUrl);
 }

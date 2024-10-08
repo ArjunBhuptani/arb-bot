@@ -5,6 +5,7 @@ const mainnetConfig: Record<string, ChainConfig> = {
   '10': { rpcUrl: process.env.RPC_OPTIMISM || '' },
   '56': { rpcUrl: process.env.RPC_BSC || '' },
   '42161': { rpcUrl: process.env.RPC_ARBITRUM || '' },
+  '8453': { rpcUrl: process.env.RPC_BASE || '' },
 };
 
 const testnetConfig: Record<string, ChainConfig> = {
