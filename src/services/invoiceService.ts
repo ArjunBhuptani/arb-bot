@@ -50,6 +50,7 @@ export async function processInvoices(invoices: Invoice[], balances: AssetBalanc
       await fillInvoice(apiUrl, invoice, privateKey);
     } else {
       logger.info(`Insufficient balance. Attempting to rebalance...`);
+      // For now this is mocked out. Need to build a more sophisticated rebalancing strategy
       const rebalanceSuccessful = await mockBridgeAggregator.rebalanceFunds(balances, asset, origin, amount, privateKey);
       if (rebalanceSuccessful) {
         if (hasEnoughBalance(balances, asset, origin, amount)) {

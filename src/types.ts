@@ -1,6 +1,6 @@
 export type NetworkType = 'mainnet' | 'testnet';
 
-export type Asset = 'USDC' | 'USDT' | 'WETH';
+export type Asset = 'USDC' | 'USDT' | 'WETH' | 'TEST';
 
 export interface ChainConfig {
   rpcUrl: string;
@@ -14,6 +14,12 @@ export interface ChainAsset {
 export type AssetAddresses = {
   assets: {
     [asset: string]: AssetData;
+  }
+};
+
+export type ProtocolAddresses = {
+  spoke: {
+    [chainId: string]: string;
   }
 };
 
