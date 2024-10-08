@@ -110,11 +110,9 @@ export function hasEnoughBalance(balances: AssetBalances, asset: string, chain: 
 
     logger.info(`amount: ${amount}`);
     // Convert the balance string to a BigNumber, handling decimal points
-    const balanceBN = BigNumber.from(ethers.parseUnits(balance, 18));
-    const preNormalizedAmountBN = BigNumber.from(ethers.parseUnits(amount, 18));
-    const amountBN = normalizeToEighteenDecimals(preNormalizedAmountBN, asset as Asset, chain);
+    const balanceBN = BigNumber.from(balance);
+    const amountBN = normalizeToEighteenDecimals(BigNumber.from(amount), asset as Asset, chain);
 
-    logger.info(`preNormalizedAmountBN: ${preNormalizedAmountBN.toString()}`);
     logger.info(`Checking balance for ${asset} on chain ${chain}`);
     logger.info(`Balance: ${balanceBN.toString()}, Required: ${amountBN.toString()}`);
 

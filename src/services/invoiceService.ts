@@ -26,7 +26,7 @@ export async function fetchOldInvoices(apiUrl: string): Promise<Invoice[]> {
 }
 
 function isOlderThanSixHours(timestamp: string): boolean {
-  const sixHoursInSeconds = 6 * 60 * 60;
+  const sixHoursInSeconds = 6;
   const invoiceTime = parseInt(timestamp);
   const currentTime = Math.floor(Date.now() / 1000);
   logger.debug(`Invoice time: ${invoiceTime}, Current time: ${currentTime}`);
@@ -176,7 +176,7 @@ function findOptimalFillDestination(
     const depositA = BigNumber.from(availableDeposits[asset][a]);
     const depositB = BigNumber.from(availableDeposits[asset][b]);
     logger.debug(`Comparing deposits: Chain ${a}: ${depositA}, Chain ${b}: ${depositB}`);
-    return Number(depositB.gte(depositA)); 
+    return Number(depositA.gte(depositB)); 
   });
 
   logger.debug(`Sorted chains: ${JSON.stringify(sortedChains)}`);
