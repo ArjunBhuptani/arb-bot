@@ -9,7 +9,7 @@ export async function initializeBot(networkType: NetworkType, privateKey: string
   logger.info(`API URL: ${apiUrl}`);
 
   const chains = getNetworkConfig(networkType);
-  const assetsToCheck = ['USDC', 'USDT', 'WETH'] as Asset[]; // You might want to make this configurable
+  const assetsToCheck = ['USDC', 'USDT', 'WETH', 'TEST'] as Asset[]; // You might want to make this configurable
 
   // Step 1: Get current balances
   const allBalances = await getAllBalances(privateKey, assetsToCheck, chains);

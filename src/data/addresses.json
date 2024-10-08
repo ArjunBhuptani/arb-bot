@@ -18,22 +18,6 @@
                 "decimals": 6,
                 "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9"
             },
-            "11155111": {
-                "decimals": 6,
-                "address": "0x7169D38820dfd117C3FA1f22a697dBA58d90BA06"
-            },
-            "420": {
-                "decimals": 6,
-                "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58"
-            },
-            "97": {
-                "decimals": 18,
-                "address": "0x337610d27c682E347C9cD60BD4b3b107C9d34dDd"
-            },
-            "421613": {
-                "decimals": 6,
-                "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9"
-            },
             "8453": {
                 "decimals": 6,
                 "address": "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2"
@@ -54,22 +38,6 @@
                 "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d"
             },
             "42161": {
-                "decimals": 6,
-                "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8"
-            },
-            "11155111": {
-                "decimals": 6,
-                "address": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238"
-            },
-            "420": {
-                "decimals": 6,
-                "address": "0x7F5c764cBc14f9669B88837ca1490cCa17c31607"
-            },
-            "97": {
-                "decimals": 18,
-                "address": "0x64544969ed7EBf5f083679233325356EbE738930"
-            },
-            "421613": {
                 "decimals": 6,
                 "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8"
             },
@@ -96,25 +64,28 @@
                 "decimals": 18,
                 "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1"
             },
-            "11155111": {
-                "decimals": 18,
-                "address": "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14"
-            },
-            "420": {
-                "decimals": 18,
-                "address": "0x4200000000000000000000000000000000000006"
-            },
-            "97": {
-                "decimals": 18,
-                "address": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd"
-            },
-            "421613": {
-                "decimals": 18,
-                "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1"
-            },
             "8453": {
                 "decimals": 18,
                 "address": "0x4200000000000000000000000000000000000006"
+            }
+        },
+        "TEST": {
+            "tickerHash": "0x852daa74cc3c31fe64542bb9b8764cfb91cc30f9acf9389071ffb44a9eefde46",
+            "11155111": {
+                "decimals": 18,
+                "address": "0xd26e3540A0A368845B234736A0700E0a5A821bBA"
+            },
+            "11155420": {
+                "decimals": 18,
+                "address": "0x7Fa13D6CB44164ea09dF8BCc673A8849092D435b"
+            },
+            "97": {
+                "decimals": 18,
+                "address": "0x5f921E4DE609472632CEFc72a3846eCcfbed4ed8"
+            },
+            "421614": {
+                "decimals": 18,
+                "address": "0xaBF282c88DeD3e386701a322e76456c062468Ac2"
             }
         }
     }

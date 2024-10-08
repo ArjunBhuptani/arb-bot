@@ -69,7 +69,7 @@ export async function fillInvoice(apiUrl: string, invoice: Invoice, privateKey: 
     const wallet = new ethers.Wallet(privateKey);
     const botAddress = await wallet.getAddress();
 
-    logger.info(`Filling invoice with amount: ${invoice.amount} for asset: ${invoice.ticker_hash}`);
+    logger.info(`Filling invoice with amount: ${invoice.amount} for asset: ${invoice.ticker_hash} on chain: ${invoice.destinations[0]} going to ${invoice.origin}`);
 
     // TODO calculate correct destinations. For now just use origin
 
